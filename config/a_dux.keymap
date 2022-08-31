@@ -25,7 +25,7 @@
        	default_layer {
 			bindings = <
 				&kp MINUS &kp F &kp M &kp G &kp Q 						       &kp Z &kp DOT  &kp X    &kp J   &kp SEMI 
-				&mt LCTRL R &mt LALT S &mt LGUI N &mt LSHFT T &kp P 			   &kp CMMA &mt RSHFT A &mt RGUI E &mt RALT I &mt RCTRL H
+				&mt LGUI R &mt LALT S &mt LCTRL N &mt LSHFT T &kp P 			   &kp CMMA &mt RSHFT A &mt RCTRL E &mt RALT I &mt RGUI H
 				&kp V &kp C &kp L &kp D &kp B				               &kp K &kp U  &kp O &kp Y &kp W
 								&kp RET &kp SPACE  				&to 1 &kp RSHIFT  
 			>;
@@ -34,7 +34,7 @@
 		left_layer {
 			bindings = <
 				&kp TILDE   &kp EXCL    &kp MINUS   &kp PLUS    &kp DOWN		       &kp UP &kp STAR &kp FSLH &kp EQUAL &kp NUM_0 
-				&mt LCTRL AMPS &mt LALT LBRC &mt LGUI LBKT &mt LSHFT LPAR &kp LT 			   &kp GT &mt RSHFT RPAR &mt RGUI RBKT &mt RALT RBRC &mt RCTRL PIPE
+				&mt LGUI AMPS &mt LALT LBRC &mt LCTRL LBKT &mt LSHFT LPAR &kp LT 			   &kp GT &mt RSHFT RPAR &mt RCTRL RBKT &mt RALT RBRC &mt RGUI PIPE
 				&kp BSLH    &trans 	&trans &trans  &kp LEFT 	                       &kp RIGHT &kp APOS &trans &kp QMARK &kp DEL 
 												&trans &to 0                    &to 2 &trans 
 			>;
@@ -43,7 +43,7 @@
 		right_layer {
 			bindings = <
 				&trans  &trans &trans  &trans  &trans    			&trans  &trans &trans &trans &mo 3 
-				&mt LCTRL N1  &mt LALT N2 &mt LGUI N3 &mt LSHFT N4 &kp N5 		&kp N6 &mt RSHFT N7 &mt RGUI N8 &mt RALT N9 &mt RCTRL N0
+				&mt LGUI N1  &mt LALT N2 &mt LCTRL N3 &mt LSHFT N4 &kp N5 		&kp N6 &mt RSHFT N7 &mt RCTRL N8 &mt RALT N9 &mt RGUI N0
 				&trans  &trans &trans &trans   &trans    			&trans &trans &trans &trans  &trans
 											&trans &to 0   				&to 1 &kp RSHIFT   
 			>;
