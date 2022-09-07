@@ -30,10 +30,17 @@ combos {
         layers = <0>;
     };
 
-    combo_digraph_wh {
+    combo_Q {
         timeout-ms = <50>;
         key-positions = <28 29>;
-        bindings = <&digraph_wh>;
+        bindings = <&kp Q>;
+        layers = <0>;
+    };
+
+    combo_Z {
+        timeout-ms = <50>;
+        key-positions = <20 21>;
+        bindings = <&kp Z>;
         layers = <0>;
     };
     
