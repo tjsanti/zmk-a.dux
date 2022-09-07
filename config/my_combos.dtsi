@@ -27,7 +27,7 @@ combos {
         timeout-ms = <50>;
         key-positions = <18 19>;
         bindings = <&kp APOS>;
-        layers = <DEFAULT, ALT>;
+        layers = <DEFAULT ALT>;
     };
 
     combo_Q {
@@ -48,7 +48,7 @@ combos {
         timeout-ms = <50>;
         key-positions = <13 16>;
         bindings = <&caps_word>;
-        layers = <DEFAULT, ALT>;
+        layers = <DEFAULT ALT>;
     };
 
     combo_alt_alpha {
