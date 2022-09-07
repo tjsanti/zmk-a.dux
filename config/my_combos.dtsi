@@ -44,4 +44,17 @@ combos {
         layers = <0>;
     };
 
+    combo_alt_alpha {
+        timeout-ms = <50>;
+        key-positions = <3 4 5 6>;
+        bindings = <&to ALT>;
+        layers = <DEFAULT>;
+    };
+
+    combo_default_alpha {
+        timeout-ms = <50>;
+        key-positions = <3 4 5 6>;
+        bindings = <&to DEFAULT>;
+        layers = <ALT>;
+    };
 };
