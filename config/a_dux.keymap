@@ -13,6 +13,8 @@
 #define NUM 2
 #define SETUP 3
 #define ALT 4
+#define ALT_SYM 5
+#define ALT_NUM 6
 
 &mt {
     flavor = "tap-preferred";
@@ -40,7 +42,7 @@
 			bindings = <
 				&kp TILDE   &kp EXCL    &kp MINUS   &kp PLUS    &kp DOWN		       &kp UP &kp STAR &kp FSLH &kp EQUAL &kp NUM_0 
 				&mt LGUI AMPS &mt LALT LBRC &mt LCTRL LBKT &mt LSHFT LPAR &kp LT 			   &kp GT &mt RSHFT RPAR &mt RCTRL RBKT &mt RALT RBRC &mt RGUI PIPE
-				&kp BSLH    &trans 	&trans &trans  &kp LEFT 	                       &kp RIGHT &kp APOS &trans &kp QMARK &kp DEL 
+				&kp BSLH    &trans 	&trans &trans  &kp LEFT 	                       &kp RIGHT &kp APOS &trans &kp DEL &kp QMARK 
 												&trans &to DEFAULT                    &to NUM &trans 
 			>;
 		};
@@ -68,9 +70,26 @@
 				&kp Q &kp W &kp F &kp P &kp B 						       &kp J &kp L  &kp U    &kp Y   &kp SEMI
 				&mt LGUI A &mt LALT R &mt LCTRL S &mt LSHFT T &kp G 			   &kp M &mt RSHFT N &mt RCTRL E &mt RALT I &mt RGUI O
 				&kp Z &kp X &kp C &kp D &kp V				               &kp K &kp H  &kp CMMA &kp DOT &kp MINUS
-								&kp RET &kp SPACE  				&to SYM &kp RSHIFT  
+								&kp RET &kp SPACE  				&to ALT_SYM &kp RSHIFT  
 			>;
 		};
 
+		alt_sym_layer {
+			bindings = <
+				&kp TILDE   &kp EXCL    &kp MINUS   &kp PLUS    &kp DOWN		       &kp UP &kp STAR &kp FSLH &kp EQUAL &kp NUM_0 
+				&mt LGUI AMPS &mt LALT LBRC &mt LCTRL LBKT &mt LSHFT LPAR &kp LT 			   &kp GT &mt RSHFT RPAR &mt RCTRL RBKT &mt RALT RBRC &mt RGUI PIPE
+				&kp BSLH    &trans 	&trans &trans  &kp LEFT 	                       &kp RIGHT &kp APOS &trans &kp DEL &kp QMARK 
+												&trans &to ALT                    &to ALT_NUM &trans 
+			>;
+		};
+
+		alt_num_layer {
+			bindings = <
+				&trans  &trans &trans  &trans  &trans    			&trans  &trans &trans &trans &to SETUP 
+				&mt LGUI N1  &mt LALT N2 &mt LCTRL N3 &mt LSHFT N4 &kp N5 		&kp N6 &mt RSHFT N7 &mt RCTRL N8 &mt RALT N9 &mt RGUI N0
+				&trans  &trans &trans &trans   &trans    			&trans &trans &trans &trans  &trans
+											&trans &to ALT   				&to ALT_SYM &kp RSHIFT   
+			>;
+		};	
 	};
 };
