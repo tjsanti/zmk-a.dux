@@ -27,28 +27,28 @@ combos {
         timeout-ms = <50>;
         key-positions = <18 19>;
         bindings = <&kp APOS>;
-        layers = <0>;
+        layers = <DEFAULT, ALT>;
     };
 
     combo_Q {
         timeout-ms = <50>;
         key-positions = <28 29>;
         bindings = <&kp Q>;
-        layers = <0>;
+        layers = <DEFAULT>;
     };
 
     combo_Z {
         timeout-ms = <50>;
         key-positions = <20 21>;
         bindings = <&kp Z>;
-        layers = <0>;
+        layers = <DEFAULT>;
     };
     
     combo_caps_word {
         timeout-ms = <50>;
         key-positions = <13 16>;
         bindings = <&caps_word>;
-        layers = <0>;
+        layers = <DEFAULT, ALT>;
     };
 
     combo_alt_alpha {
