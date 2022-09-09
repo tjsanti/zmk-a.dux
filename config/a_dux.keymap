@@ -23,6 +23,7 @@
 
 / { 
 
+	#include "my_behaviors.dtsi"
 	#include "my_macros.dtsi"
 	#include "my_combos.dtsi"
 
