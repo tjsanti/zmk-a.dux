@@ -8,6 +8,11 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+#include "../helper.h"
+#include "../keypos_34keys.h"
+
+#define QUICK_TAP_MS 175
+
 #define DEFAULT 0
 #define SYM 1
 #define NUM 2
@@ -21,9 +26,10 @@
     tapping_term_ms = <230>;
 };
 
+#include "my_behaviors.dtsi"
+
 / { 
 
-	#include "my_behaviors.dtsi"
 	#include "my_macros.dtsi"
 	#include "my_combos.dtsi"
 
@@ -32,8 +38,8 @@
                 
        	default_layer {
 			bindings = <
-				&trans &kp W &kp M &kp G &trans 						       &trans &kp DOT  &kp K    &kp J   &trans
-				&mt LGUI R &mt LALT S &mt LCTRL N &mt LSHFT T &kp P 			   &kp CMMA &mt RSHFT A &mt RCTRL E &mt RALT I &mt RGUI H
+				&trans &kp W &kp M &kp G &trans 						       &trans &DotColn  &kp K    &kp J   &trans
+				&hml LGUI R &hml LALT S &hml LCTRL N &hmls LSHFT T &kp P 			   &CmmaSemi &hmrs RSHFT A &hmr RCTRL E &hmr RALT I &hmr RGUI H
 				&kp L &kp C &kp V &kp D &kp B				               &kp X &kp O  &kp U &kp Y &kp F
 								&kp RET &kp SPACE  				&to SYM &kp RSHIFT  
 			>;
@@ -42,7 +48,7 @@
 		sym_layer {
 			bindings = <
 				&kp TILDE   &kp EXCL    &kp MINUS   &kp PLUS    &kp DOWN		       &kp UP &kp STAR &kp FSLH &kp EQUAL &kp NUM_0 
-				&mt LGUI AMPS &mt LALT LBRC &mt LCTRL LBKT &mt LSHFT LPAR &kp LT 			   &kp GT &mt RSHFT RPAR &mt RCTRL RBKT &mt RALT RBRC &mt RGUI PIPE
+				&hml LGUI AMPS &hml LALT LBRC &hml LCTRL LBKT &hmls LSHFT LPAR &kp LT 			   &kp GT &hmrs RSHFT RPAR &hmr RCTRL RBKT &hmr RALT RBRC &hmr RGUI PIPE
 				&kp BSLH    &trans 	&trans &trans  &kp LEFT 	                       &kp RIGHT &kp APOS &trans &kp DEL &kp QMARK 
 												&trans &to DEFAULT                    &to NUM &trans 
 			>;
@@ -51,7 +57,7 @@
 		num_layer {
 			bindings = <
 				&trans  &trans &trans  &trans  &trans    			&trans  &trans &trans &trans &to SETUP 
-				&mt LGUI N1  &mt LALT N2 &mt LCTRL N3 &mt LSHFT N4 &kp N5 		&kp N6 &mt RSHFT N7 &mt RCTRL N8 &mt RALT N9 &mt RGUI N0
+				&hml LGUI N1  &hml LALT N2 &hml LCTRL N3 &hmls LSHFT N4 &kp N5 		&kp N6 &hmrs RSHFT N7 &hmr RCTRL N8 &hmr RALT N9 &hmr RGUI N0
 				&trans  &trans &trans &trans   &trans    			&trans &trans &trans &trans  &trans
 											&trans &to DEFAULT   				&to SYM &kp RSHIFT   
 			>;
@@ -69,7 +75,7 @@
        	alt_alpha_layer {
 			bindings = <
 				&kp Q &kp W &kp F &kp P &kp B 						       &kp J &kp L  &kp U    &kp Y   &kp SEMI
-				&mt LGUI A &mt LALT R &mt LCTRL S &mt LSHFT T &kp G 			   &kp M &mt RSHFT N &mt RCTRL E &mt RALT I &mt RGUI O
+				&hml LGUI A &hml LALT R &hml LCTRL S &hmls LSHFT T &kp G 			   &kp M &hmrs RSHFT N &hmr RCTRL E &hmr RALT I &hmr RGUI O
 				&kp Z &kp X &kp C &kp D &kp V				               &kp K &kp H  &kp CMMA &kp DOT &kp MINUS
 								&kp RET &kp SPACE  				&to ALT_SYM &kp RSHIFT  
 			>;
@@ -78,7 +84,7 @@
 		alt_sym_layer {
 			bindings = <
 				&kp TILDE   &kp EXCL    &kp MINUS   &kp PLUS    &kp DOWN		       &kp UP &kp STAR &kp FSLH &kp EQUAL &kp NUM_0 
-				&mt LGUI AMPS &mt LALT LBRC &mt LCTRL LBKT &mt LSHFT LPAR &kp LT 			   &kp GT &mt RSHFT RPAR &mt RCTRL RBKT &mt RALT RBRC &mt RGUI PIPE
+				&hml LGUI AMPS &hml LALT LBRC &hml LCTRL LBKT &hmls LSHFT LPAR &kp LT 			   &kp GT &hmrs RSHFT RPAR &hmr RCTRL RBKT &hmr RALT RBRC &hmr RGUI PIPE
 				&kp BSLH    &trans 	&trans &trans  &kp LEFT 	                       &kp RIGHT &kp APOS &trans &kp DEL &kp QMARK 
 												&trans &to ALT                    &to ALT_NUM &trans 
 			>;
@@ -87,7 +93,7 @@
 		alt_num_layer {
 			bindings = <
 				&trans  &trans &trans  &trans  &trans    			&trans  &trans &trans &trans &to SETUP 
-				&mt LGUI N1  &mt LALT N2 &mt LCTRL N3 &mt LSHFT N4 &kp N5 		&kp N6 &mt RSHFT N7 &mt RCTRL N8 &mt RALT N9 &mt RGUI N0
+				&hml LGUI N1  &hml LALT N2 &hml LCTRL N3 &hmls LSHFT N4 &kp N5 		&kp N6 &hmrs RSHFT N7 &hmr RCTRL N8 &hmr RALT N9 &hmr RGUI N0
 				&trans  &trans &trans &trans   &trans    			&trans &trans &trans &trans  &trans
 											&trans &to ALT   				&to ALT_SYM &kp RSHIFT   
 			>;
