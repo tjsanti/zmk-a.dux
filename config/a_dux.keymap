@@ -41,7 +41,7 @@
 				&trans &kp W &kp M &kp G &trans 						       &trans &DotColn  &kp K    &kp J   &trans
 				&hml LGUI R &hml LALT S &hml LCTRL N &hmls LSHFT T &kp P 			   &CmmaSemi &hmrs RSHFT A &hmr RCTRL E &hmr RALT I &hmr RGUI H
 				&kp L &kp C &kp V &kp D &kp B				               &kp X &kp O  &kp U &kp Y &kp F
-								&kp RET &kp SPACE  				&to SYM &kp RSHIFT  
+								&kp RET &kp SPACE  				&to SYM &kp ESC  
 			>;
 		};
 
